@@ -1,0 +1,22 @@
+<ion-view view-title="Glasgow Salah Times" class="header-background">
+  <ion-content class="back-pattern">
+  <div class="list list-inset">
+    <ion-item class="item-remove-animate item-transparent" style="background-color: #DBF1F6 !important; opacity:0.8;">
+    <div style="text-align:center;">
+      <span>{{today | date:'EEE,  d MMM yyyy'}}</span>
+    </div>
+  </ion-item>
+  </div>
+    <!--<ion-list  class="list-inset" ng-repeat="salah in salahs" type="item-text-wrap" href="#/tab/chats/{{salah.id}}">-->
+    <div style="padding-left:20px;padding-right:10px;" ng-style="{'line-height': '20px'}">
+      <ion-item class="item-remove-animate item-icon-right item-transparent" ng-repeat="salah in timings" type="item-text-wrap" href="#/tab/chats/{{salah.id}}" style="background-color: #FFFFFF !important; opacity:0.7;">
+      <span style="color:black;">
+        {{salah.salahName}}</span>
+    <span class="item-note" style="color:black;">
+      
+        <h3>{{salah.salahTime}}</h3>
+        </span>  
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-view>
